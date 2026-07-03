@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clarify Home — Membership Plans | Central Florida Exterior Cleaning</title>
+<meta name="description" content="Keep your home pristine year-round. Window cleaning, gutter cleaning, soft wash & more on autopilot. Membership plans from $119/mo. Central Florida area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#07142E;
+  --navy-2:#0B1D3F;
+  --navy-3:#102A55;
+  --cyan:#38D2E6;
+  --cyan-deep:#189BB5;
+  --ice:#F2F7FA;
+  --ink:#0E2240;
+  --mut:#5A6E86;
+  --gold:#F5C64F;
+  --white:#FFFFFF;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(7,20,46,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Instrument Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--navy);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+img{max-width:100%}
+a{color:var(--cyan)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* ---------- squeegee rule (signature motif) ---------- */
+.squeegee{display:flex;align-items:center;gap:8px;margin:0 auto 18px;width:max-content}
+.squeegee .bar{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),rgba(56,210,230,.15))}
+.squeegee .drop{width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+
+/* ---------- hero ---------- */
+.hero{background:
+  radial-gradient(900px 480px at 85% -10%, rgba(56,210,230,.16), transparent 60%),
+  radial-gradient(700px 420px at -10% 110%, rgba(24,155,181,.14), transparent 60%),
+  var(--navy);
+  color:var(--white);
+  padding:64px 0 52px;
+  text-align:center;
+}
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:16px;
+}
+.hero h1{
+  font-family:'Bricolage Grotesque','Instrument Sans',sans-serif;
+  font-weight:800;
+  font-size:clamp(34px,7.5vw,58px);
+  line-height:1.06;
+  letter-spacing:-.015em;
+  margin:0 auto 18px;
+  max-width:14ch;
+  background:linear-gradient(105deg,#FFFFFF 30%,var(--cyan) 50%,#FFFFFF 70%);
+  background-size:250% 100%;
+  background-position:100% 0;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+@media (prefers-reduced-motion: no-preference){
+  .hero h1{animation:sweep 1.6s cubic-bezier(.65,0,.35,1) .3s forwards}
+}
+@keyframes sweep{to{background-position:0% 0}}
+.hero .sub{
+  color:#B9C7DB;font-size:17px;max-width:34ch;margin:0 auto 28px;
+}
+.btn{
+  display:inline-block;border:0;cursor:pointer;text-decoration:none;
+  font-family:inherit;font-weight:700;font-size:16px;
+  padding:15px 30px;border-radius:999px;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-deep));
+  color:var(--navy);
+  box-shadow:0 8px 24px rgba(56,210,230,.35);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(56,210,230,.45)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.stats{
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:34px;
+}
+.chip{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(56,210,230,.25);
+  border-radius:14px;padding:12px 18px;min-width:104px;
+}
+.chip b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:20px;color:var(--cyan);letter-spacing:-.01em}
+.chip span{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B9C7DB}
+
+/* ---------- plans ---------- */
+.sec-light{background:var(--ice);padding:60px 0 64px}
+.sec-head{text-align:center;margin-bottom:38px}
+.sec-head .eyebrow{color:var(--cyan-deep)}
+.sec-head h2{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+  font-size:clamp(26px,5.5vw,38px);letter-spacing:-.015em;color:var(--ink);
+}
+.sec-head p{color:var(--mut);max-width:46ch;margin:10px auto 0}
+.tiers{display:grid;gap:22px}
+@media (min-width:880px){
+  .tiers{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .card.feat{transform:translateY(-10px)}
+}
+.card{
+  position:relative;background:var(--white);border-radius:var(--radius);
+  padding:30px 26px 28px;box-shadow:var(--shadow);
+  border:1px solid rgba(14,34,64,.06);
+  display:flex;flex-direction:column;
+}
+.card::before{ /* waterline */
+  content:"";position:absolute;top:0;left:26px;right:26px;height:3px;border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg,var(--cyan),rgba(56,210,230,.1));
+}
+.card.feat{
+  border:2px solid var(--cyan);
+  box-shadow:0 18px 44px rgba(24,155,181,.22);
+}
+.ribbon{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#5A4200;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;white-space:nowrap;
+}
+.tier-label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-deep);margin-bottom:6px}
+.card h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:25px;letter-spacing:-.01em;margin-bottom:14px}
+.price{display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.price b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:42px;letter-spacing:-.02em;color:var(--ink)}
+.price span{color:var(--mut);font-weight:600}
+.value{font-size:13.5px;color:var(--mut);margin-bottom:20px}
+.value s{text-decoration:line-through;opacity:.75}
+.value em{font-style:normal;font-weight:700;color:var(--cyan-deep)}
+.feat-list{list-style:none;margin:0 0 26px;flex:1}
+.feat-list li{
+  display:flex;gap:11px;align-items:flex-start;
+  padding:8px 0;font-size:15px;color:var(--ink);
+}
+.feat-list li+li{border-top:1px solid rgba(14,34,64,.06)}
+.tick{
+  flex:none;width:21px;height:21px;margin-top:1px;border-radius:50%;
+  background:rgba(56,210,230,.16);color:var(--cyan-deep);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;
+}
+.card .btn{width:100%;text-align:center;padding:14px 0;font-size:15px}
+.card:not(.feat) .btn{
+  background:var(--navy);color:var(--white);box-shadow:none;
+}
+.card:not(.feat) .btn:hover{box-shadow:0 10px 24px rgba(7,20,46,.25)}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Clarify Home · Membership</p>
+    <h1>Keep it pristine. Never think about it.</h1>
+    <p class="sub">A membership that keeps your home looking its best all year — on a schedule, handled by the same crew you already trust.</p>
+    <a class="btn" href="#plans">See the plans</a>
+    <div class="stats">
+      <div class="chip"><b>4×</b><span>Windows / yr</span></div>
+      <div class="chip"><b>Auto</b><span>Scheduled</span></div>
+      <div class="chip"><b>Same-day</b><span>Priority</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PLANS ================= -->
+<section class="sec-light" id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="squeegee"><span class="bar"></span><span class="drop"></span></div>
+      <p class="eyebrow">The plans</p>
+      <h2>Pick your level of pristine</h2>
+      <p>No contracts. Cancel anytime. Every plan saves ~10% vs. booking one-off.</p>
+    </div>
+
+    <div class="tiers">
+      <!-- Tier 1 -->
+      <article class="card">
+        <p class="tier-label">Tier 1</p>
+        <h3>Clear View</h3>
+        <div class="price"><b>$119</b><span>/ month</span></div>
+        <p class="value"><s>$1,600/yr value</s> <em>save ~10%</em></p>
+        <ul class="feat-list">
+          <li><span class="tick">✓</span>Exterior windows, every quarter</li>
+          <li><span class="tick">✓</span>Gutter cleaning, twice a year</li>
+          <li><span class="tick">✓</span>Cobweb &amp; sill wipe each visit</li>
+        </ul>
+        <button class="btn" onclick="choosePlan('Clear View — $119/mo')">Choose Clear View</button>
+      </article>
+
+      <!-- Tier 2 — featured -->
+      <article class="card feat">
+        <span class="ribbon">★ Most Popular</span>
+        <p class="tier-label">Tier 2</p>
+        <h3>Crystal Clear</h3>
+        <div class="price"><b>$169</b><span>/ month</span></div>
+        <p class="value"><s>$2,250/yr value</s> <em>save ~10%</em></p>
+        <ul class="feat-list">
+          <li><span class="tick">✓</span>Everything in Clear View</li>
+          <li><span class="tick">✓</span>Full house soft wash, once a year</li>
+          <li><span class="tick">✓</span>Driveway &amp; walkway wash</li>
+        </ul>
+        <button class="btn" onclick="choosePlan('Crystal Clear — $169/mo')">Choose Crystal Clear</button>
+      </article>
+
+      <!-- Tier 3 -->
+      <article class="card">
+        <p class="tier-label">Tier 3</p>
+        <h3>Showcase</h3>
+        <div class="price"><b>$289</b><span>/ month</span></div>
+        <p class="value"><s>$3,850/yr value</s> <em>save ~10%</em></p>
+        <ul class="feat-list">
+          <li><span class="tick">✓</span>Everything in Crystal Clear</li>
+          <li><span class="tick">✓</span>Interior windows, twice a year</li>
+          <li><span class="tick">✓</span>Roof soft wash, once a year</li>
+          <li><span class="tick">✓</span>Priority scheduling</li>
+          <li><span class="tick">✓</span>Free love-bug &amp; storm touch-ups</li>
+        </ul>
+        <button class="btn" onclick="choosePlan('Showcase — $289/mo')">Choose Showcase</button>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ================= GUARANTEES ================= -->
+<section class="sec-light" id="includes" style="padding-top:0">
+  <div class="wrap">
+    <div class="guarantee">
+      <h2>Every plan includes</h2>
+      <ul class="g-list">
+        <li><span class="tick">✓</span><div><b>No contract.</b> Cancel anytime — the convenience keeps you, not a lock-in.</div></li>
+        <li><span class="tick">✓</span><div><b>Re-clean guarantee.</b> Not spotless? We come back, no charge.</div></li>
+        <li><span class="tick">✓</span><div><b>Same trusted crew.</b> We handle the schedule so you never have to call.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5-STAR STRIP ================= -->
+<section class="stars-strip">
+  <div class="wrap">
+    <p class="stars" aria-hidden="true">★ ★ ★ ★ ★</p>
+    <p class="stars-line">Rated 5 stars by homeowners across the Central Florida area</p>
+  </div>
+</section>
+
+<!-- ================= SIGNUP ================= -->
+<section class="signup" id="signup">
+  <div class="wrap">
+    <div class="form-card">
+      <div class="squeegee"><span class="bar"></span><span class="drop"></span></div>
+      <p class="eyebrow">Start today</p>
+      <h2>Get on the schedule</h2>
+      <p class="form-sub">Pick your plan and we'll reach out to set your first visit. Takes 30 seconds.</p>
+
+      <form id="planForm" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="source" value="Membership plans page">
+        <div class="grid2">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Smith">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(407) 555-0134">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-address">Home address</label>
+          <input id="f-address" name="address" type="text" autocomplete="street-address" required placeholder="123 Lakeview Dr, Sanford">
+        </div>
+        <div class="field">
+          <label for="f-plan">Plan</label>
+          <select id="f-plan" name="plan" required>
+            <option value="Crystal Clear — $169/mo" selected>Crystal Clear — $169/mo (Most popular)</option>
+            <option value="Clear View — $119/mo">Clear View — $119/mo</option>
+            <option value="Showcase — $289/mo">Showcase — $289/mo</option>
+            <option value="Not sure yet">Not sure yet — help me choose</option>
+          </select>
+        </div>
+        <button class="btn btn-submit" type="submit" id="submitBtn">Request my first visit</button>
+        <p class="form-note" id="formNote">No contract · Cancel anytime · Re-clean guarantee</p>
+        <div class="form-error" id="formError" hidden>
+          Your request didn't send. <a href="https://instagram.com/clarifysolutions" target="_blank" rel="noopener">Send us a DM @clarifysolutions</a> with your plan choice and we'll get you set up today.
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="big-tick">✓</div>
+        <h3>You're on the list.</h3>
+        <p>We'll reach out shortly to set your first visit. Welcome to Clarify Home.</p>
+      </div>
+
+      <p class="dm-line">Prefer to chat first? <a href="https://instagram.com/clarifysolutions" target="_blank" rel="noopener">Send a DM @clarifysolutions</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-brand">Clarify Home · Exterior Cleaning &amp; Home Care</p>
+    <p class="foot-area">Serving Wekiva to Sanford &amp; Lake Nona · Central Florida area</p>
+  </div>
+</footer>
+
+<style>
+/* ---------- guarantees ---------- */
+.guarantee{
+  background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);
+  border:1px solid rgba(14,34,64,.06);
+  padding:32px 26px;max-width:640px;margin:0 auto;
+}
+.guarantee h2{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:22px;
+  letter-spacing:-.01em;margin-bottom:16px;text-align:center;
+}
+.g-list{list-style:none}
+.g-list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;font-size:15px}
+.g-list li+li{border-top:1px solid rgba(14,34,64,.06)}
+.g-list b{color:var(--ink)}
+.g-list div{color:var(--mut)}
+
+/* ---------- stars strip ---------- */
+.stars-strip{
+  background:linear-gradient(135deg,var(--navy-2),var(--navy));
+  text-align:center;padding:40px 20px;
+  border-top:1px solid rgba(56,210,230,.15);
+  border-bottom:1px solid rgba(56,210,230,.15);
+}
+.stars{color:var(--gold);font-size:24px;letter-spacing:.35em;margin-bottom:10px}
+.stars-line{color:#B9C7DB;font-size:15.5px;font-weight:500}
+
+/* ---------- signup ---------- */
+.signup{background:var(--navy);padding:60px 0 70px}
+.form-card{
+  background:var(--navy-2);
+  border:1px solid rgba(56,210,230,.22);
+  border-radius:22px;
+  padding:38px 26px;
+  max-width:560px;margin:0 auto;text-align:center;
+}
+.form-card h2{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--white);
+  font-size:clamp(26px,5.5vw,34px);letter-spacing:-.015em;margin-bottom:8px;
+}
+.form-sub{color:#B9C7DB;font-size:15px;margin-bottom:26px}
+#planForm{text-align:left}
+.grid2{display:grid;gap:0}
+@media (min-width:560px){.grid2{grid-template-columns:1fr 1fr;gap:0 14px}}
+.field{margin-bottom:16px}
+.field label{
+  display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:7px;
+}
+.field input,.field select{
+  width:100%;font-family:inherit;font-size:16px;color:var(--white);
+  background:var(--navy-3);
+  border:1px solid rgba(56,210,230,.25);
+  border-radius:12px;padding:14px 15px;
+  appearance:none;-webkit-appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2338D2E6' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;
+}
+.field input::placeholder{color:#5A6E86}
+.field input:focus,.field select:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(56,210,230,.2)}
+.btn-submit{width:100%;margin-top:6px;font-size:16px}
+.btn-submit[disabled]{opacity:.6;cursor:wait;transform:none}
+.form-note{margin-top:14px;text-align:center;font-size:12.5px;color:#7C8DA6}
+.form-error{
+  margin-top:16px;font-size:14.5px;color:#FFB3AD;
+  background:rgba(255,99,88,.08);border:1px solid rgba(255,99,88,.35);
+  border-radius:12px;padding:14px 16px;text-align:center;
+}
+.form-error a{color:var(--gold);font-weight:600}
+.form-success{padding:20px 0 6px}
+.big-tick{
+  width:58px;height:58px;margin:0 auto 16px;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-deep));
+  color:var(--navy);font-size:26px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.form-success h3{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+  color:var(--white);font-size:26px;margin-bottom:8px;
+}
+.form-success p{color:#B9C7DB;font-size:15.5px}
+.dm-line{margin-top:22px;font-size:14px;color:#7C8DA6}
+.dm-line a{color:var(--cyan);font-weight:600;text-decoration:none}
+.dm-line a:hover{text-decoration:underline}
+
+/* ---------- footer ---------- */
+.foot{background:var(--navy);text-align:center;padding:0 20px 44px}
+.foot-brand{color:#B9C7DB;font-weight:600;font-size:14px}
+.foot-area{color:#5A6E86;font-size:13px;margin-top:4px}
+</style>
+
+<script>
+/* =========================================================
+   FORM DELIVERY — REQUIRED SETUP
+   1. Create a free form at https://formspree.io
+   2. Replace YOUR_FORM_ID below with your real endpoint ID.
+   Until then, submissions show the DM fallback (never a
+   fake success) so no lead is silently lost.
+   ========================================================= */
+var FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+function choosePlan(plan){
+  var sel = document.getElementById('f-plan');
+  for (var i = 0; i < sel.options.length; i++){
+    if (sel.options[i].value === plan){ sel.selectedIndex = i; break; }
+  }
+  document.getElementById('signup').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){ document.getElementById('f-name').focus({preventScroll:true}); }, 600);
+}
+
+document.getElementById('planForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = e.target;
+  var err = document.getElementById('formError');
+  var btn = document.getElementById('submitBtn');
+  err.hidden = true;
+
+  if (!form.reportValidity()) return;
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(function(res){
+    if (res.ok){
+      form.hidden = true;
+      document.getElementById('formSuccess').hidden = false;
+    } else { throw new Error('send failed'); }
+  })
+  .catch(function(){
+    err.hidden = false;
+    btn.disabled = false;
+    btn.textContent = 'Request my first visit';
+  });
+});
+</script>
+</body>
+</html>
